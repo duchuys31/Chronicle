@@ -6,8 +6,8 @@ import { gapi } from "gapi-script";
 import { GoogleLogout, GoogleLogin, signOut, useGoogleLogout } from "react-google-login";
 import { FacebookLoginButton, GoogleLoginButton } from "react-social-login-buttons";
 import { LoginSocialFacebook } from "reactjs-social-login";
-const clientId = "564120636872-d7tl1gt5n3gk1if0b40nd1h3qcqcjst9.apps.googleusercontent.com"
-const appId = "270902075435430"
+const clientId = ""
+const appId = ""
 
 const LoginGoogle = () =>
 {
