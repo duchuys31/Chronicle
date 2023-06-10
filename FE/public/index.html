@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Chronicle Education Category Bootstrap Responsive website Template | Shop Catalogue :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Chronicle" />
+    <script>
+      addEventListener( "load", function ()
+      {
+        setTimeout( hideURLbar, 0 );
+      }, false );
+
+      function hideURLbar ()
+      {
+        window.scrollTo( 0, 1 );
+      }
+    </script>
+    <style>
+      .loader {
+        border: 16px solid #f3f3f3;
+        border-top: 16px solid #297b4a;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+    </style>
+
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/shop.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/checkout.css" type="text/css" rel="stylesheet" media="all">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui1.css">
+    <link rel="stylesheet" href="css/easy-responsive-tabs.css" type="text/css" media="all" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <link href="//fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i,800,800i"
+      rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+      rel="stylesheet">
+    <title>Book Store</title>
+  </head>
+
+  <body>
+    <!-- <noscript>You need to enable JavaScript to run this app.</noscript> -->
+    <div id="root">
+    </div>
+  </body>
+  <script>
+    chr.render();
+
+    chr.cart.on( 'new_checkout', function ( evt )
+    {
+      var items, len, i;
+
+      if ( this.subtotal() > 0 )
+      {
+        items = this.items();
+
+        for ( i = 0, len = items.length; i < len; i++ ) { }
+      }
+    } );
+  </script>
+  <script src="js/jquery-2.2.3.min.js"></script>
+
+  <script src="js/jquery-ui.js"></script>
+
+  <script src="js/minicart.js"></script>
+
+  <script>
+    chr.render();
+
+    chr.cart.on( 'new_checkout', function ( evt )
+    {
+      var items, len, i;
+
+      if ( this.subtotal() > 0 )
+      {
+        items = this.items();
+
+        for ( i = 0, len = items.length; i < len; i++ ) { }
+      }
+    } );
+  </script>
+  <script src="js/creditly.js"></script>
+  <link rel="stylesheet" href="css/creditly.css" type="text/css" media="all" />
+
+  <script>
+    $( function ()
+    {
+      var creditly = Creditly.initialize(
+        '.creditly-wrapper .expiration-month-and-year',
+        '.creditly-wrapper .credit-card-number',
+        '.creditly-wrapper .security-code',
+        '.creditly-wrapper .card-type' );
+
+      $( ".creditly-card-form .submit" ).click( function ( e )
+      {
+        e.preventDefault();
+        var output = creditly.validate();
+        if ( output )
+        {
+          // Your validated credit card output
+          console.log( output );
+        }
+      } );
+    } );
+  </script>
+  <script src="js/easy-responsive-tabs.js"></script>
+  <script>
+    $( document ).ready( function ()
+    {
+      $( '#horizontalTab' ).easyResponsiveTabs( {
+        type: 'default', //Types: default, vertical, accordion           
+        width: 'auto', //auto or any width like 600px
+        fit: true, // 100% fit in a container
+        closed: 'accordion', // Start closed if in accordion view
+        activate: function ( event )
+        { // Callback function if tab is switched
+          var $tab = $( this );
+          var $info = $( '#tabInfo' );
+          var $name = $( 'span', $info );
+          $name.text( $tab.text() );
+          $info.show();
+        }
+      } );
+    } );
+  </script>
+  <script>
+    chr.render();
+
+    chr.cart.on( 'chr_checkout', function ( evt )
+    {
+      var items, len, i;
+
+      if ( this.subtotal() > 0 )
+      {
+        items = this.items();
+
+        for ( i = 0, len = items.length; i < len; i++ ) { }
+      }
+    } );
+  </script>
+
+  <script>
+    //<![CDATA[ 
+    $( window ).load( function ()
+    {
+      $( "#slider-range" ).slider( {
+        range: true,
+        min: 0,
+        max: 9000,
+        values: [ 50, 6000 ],
+        slide: function ( event, ui )
+        {
+          $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+        }
+      } );
+      $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+
+    } ); //]]>
+  </script>
+  <!-- //price range (top products) -->
+
+  <script src="js/imagezoom.js"></script>
+  <!-- dropdown nav -->
+  <script src="js/jquery.flexslider.js"></script>
+
+  <script>
+    // Can also be used with $(document).ready()
+    $( window ).load( function ()
+    {
+      $( '.flexslider1' ).flexslider( {
+        animation: "slide",
+        controlNav: "thumbnails"
+      } );
+    } );
+  </script>
+  <script>
+    $( document ).ready( function ()
+    {
+      $( ".dropdown" ).hover(
+        function ()
+        {
+          $( '.dropdown-menu', this ).stop( true, true ).slideDown( "fast" );
+          $( this ).toggleClass( 'open' );
+        },
+        function ()
+        {
+          $( '.dropdown-menu', this ).stop( true, true ).slideUp( "fast" );
+          $( this ).toggleClass( 'open' );
+        }
+      );
+    } );
+  </script>
+  <!-- //dropdown nav -->
+  <!--search jQuery-->
+  <script src="js/main.js"></script>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0&appId=151562557820300&autoLogAppEvents=1"
+    nonce="XXX"></script>
+
+  <!--search jQuery-->
+
+  <!-- Scrolling Nav JavaScript -->
+  <script src="js/scrolling-nav.js"></script>
+  <!-- //fixed-scroll-nav-js -->
+  <!--//scripts-->
+
+  <script src="js/bootstrap.js"></script>
+  <!-- start-smoth-scrolling -->
+  <script src="js/move-top.js"></script>
+  <script src="js/easing.js"></script>
+  <script>
+    jQuery( document ).ready( function ( $ )
+    {
+      $( ".scroll" ).click( function ( event )
+      {
+        event.preventDefault();
+        $( 'html,body' ).animate( {
+          scrollTop: $( this.hash ).offset().top
+        }, 1000 );
+      } );
+    } );
+  </script>
+  <!-- start-smoth-scrolling -->
+  <!-- here stars scrolling icon -->
+  <script>
+    $( document ).ready( function ()
+    {
+      /*
+        var defaults = {
+        containerID: 'toTop', // fading element id
+        containerHoverID: 'toTopHover', // fading element hover id
+        scrollSpeed: 1200,
+        easingType: 'linear' 
+        };
+      */
+
+      $().UItoTop( {
+        easingType: 'easeOutQuart'
+      } );
+
+    } );
+  </script>
+  <!-- //here ends scrolling icon -->
+  <!-- smoothscroll -->
+  <!-- <script src="js/SmoothScroll.min.js"></script> -->
+
+</html>
